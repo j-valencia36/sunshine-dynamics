@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <link rel="stylesheet" href="css/styleFinal.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/favicon6.png">
+    <link rel="icon" href="images/favicon6.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon6.ico" type="image/x-icon">
+    <style>
+        /* Set image slider box to 200x125 pixels and force images to fill this area */
+        .image-slider {
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #1c66df;
+            border-radius: 8px;
+            margin: 0 auto;
+        }
+
+        .slider-img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        /* Styling for the consultation button */
+        .consultation-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #1c66df;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 80px; /* Moves the products section down */
+        }
+        .product {
+            flex: 1 1 400px;
+            max-width: 400px;
+            text-align: center; /* Center all text inside the product */
+            margin-bottom: 30px; /* Add space between products */
+        }
+        .product-details {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+            text-align: center; /* Center the details text */
+        }
+        @media screen and (max-width: 768px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hamburger Menu Button for Mobile -->
+    <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/favicon6.png"></a>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links" id="top-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="products.html" class="dropbtn">Products</a>
+            </li>
+            <li><a href="requests.html">Requests</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="nogrid.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Products Section with Image Slider -->
+    <div class="products">
+        <div class="product">
+            <h3>The Spyder Box</h3>
+            <div class="image-slider" id="slider1">
+                <img src="images/1image1.png" alt="The Spyder Box View 1" class="slider-img">
+                <img src="images/1image2.jpg" alt="The Spyder Box View 2" class="slider-img" style="display: none;">
+                <img src="images/1image3.jpg" alt="The Spyder Box View 3" class="slider-img" style="display: none;">
+            </div>
+            <p style="text-align: center;">Small power bank and distribution box.</p>
+            <div class="product-details" style="text-align: center;">
+                <p>This versatile box is ideal for providing electricity in remote areas, especially when setting up temporary power systems for construction or camping purposes.</p>
+                <p>Easy to transport and setup, it ensures power distribution is as efficient as possible.</p>
+            </div>
+        </div>
+        <div class="product">
+            <h3>High Voltage Unit</h3>
+            <div class="image-slider" id="slider2">
+                <img src="images/2image1.png" alt="High Voltage Unit View 1" class="slider-img">
+                <img src="images/2image2.jpg" alt="High Voltage Unit View 2" class="slider-img" style="display: none;">
+                <img src="images/2image3.jpg" alt="High Voltage Unit View 3" class="slider-img" style="display: none;">
+            </div>
+            <p style="text-align: center;">Can power an entire home, community pool, etc.</p>
+            <div class="product-details" style="text-align: center;">
+                <p>This unit is designed for large-scale energy needs, providing stable and reliable electricity for industrial and residential use alike.</p>
+                <p>Its robust design can handle the power requirements of entire homes, office buildings, and more.</p>
+            </div>
+        </div>
+        <div class="product">
+            <h3>Solar Station</h3>
+            <div class="image-slider" id="slider3">
+                <img src="images/3image1.png" alt="Solar Station View 1" class="slider-img">
+                <img src="images/3image2.jpg" alt="Solar Station View 2" class="slider-img" style="display: none;">
+                <img src="images/3image3.jpg" alt="Solar Station View 3" class="slider-img" style="display: none;">
+            </div>
+            <p style="text-align: center;">Used by anyone working on the tract to power batteries, lights, phones, tools, radios, etc. Max output of 240 volts.</p>
+            <div class="product-details" style="text-align: center;">
+                <p>The Solar Station is a portable and efficient solution for powering tools and devices in remote work environments, especially in off-grid locations.</p>
+                <p>It is the perfect companion for teams in construction, agriculture, or emergency services, providing reliable power when and where it's needed most.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cube">
+        <h1>The Spyder Box</h1>
+        <p>This versatile box is ideal for providing electricity in remote areas, especially when setting up temporary power systems for construction or camping purposes.</p>
+        <p>Easy to transport and setup, it ensures power distribution is as efficient as possible.</p>
+    </div>
+
+    <div class="cube">
+        <h1>High Voltage Unit</h1>
+        <p>This unit is designed for large-scale energy needs, providing stable and reliable electricity for industrial and residential use alike.</p>
+        <p>Its robust design can handle the power requirements of entire homes, office buildings, and more.</p>
+    </div>
+
+    <div class="cube">
+        <h1>Solar Station</h1>
+        <p>The Solar Station is a portable and efficient solution for powering tools and devices in remote work environments, especially in off-grid locations.</p>
+        <p>It is the perfect companion for teams in construction, agriculture, or emergency services, providing reliable power when and where it's needed most.</p>
+    </div>
+    
+    <script src="js/script.js" defer></script>
+    <script>
+        // JavaScript function for image slider
+        function startSlider(sliderId) {
+            const slider = document.getElementById(sliderId);
+            const images = slider.getElementsByClassName('slider-img');
+            let currentIndex = 0;
+            setInterval(() => {
+                images[currentIndex].style.display = 'none';
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].style.display = 'block';
+            }, 3000); // 3 seconds interval
+        }
+
+        // Start sliders for each product
+        document.addEventListener('DOMContentLoaded', () => {
+            startSlider('slider1');
+            startSlider('slider2');
+            startSlider('slider3');
+        });
+    </script>
+</body>
+</html>
